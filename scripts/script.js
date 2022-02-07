@@ -21,12 +21,10 @@ function calcular(n1, n2){
             break
         
         case '/':
-            calculo = Math.round((n1 / n2 + Number.EPSILON) * 100) / 100
-            if(Number.isNaN(calculo)){
-                document.getElementById("resultado").innerHTML = `Insira um divisível válido`
-            } else { `${calculo}`
-                break
-            }
+            calculo = (n1 / n2).toFixed(2)
+            document.getElementById("resultado").innerHTML = `${calculo}`
+            break
+
         case '**':
             calculo = (n1 ** n2)
             document.getElementById("resultado").innerHTML =  `${calculo}`
